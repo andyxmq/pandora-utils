@@ -4,7 +4,7 @@ module.exports = {
 	"entry": "./src/index.js",
 	"output": {
 		path: path.resolve(__dirname, "release"),
-		filename: "[name].[hash-chunk].js",
+		filename: "[name].[hash].js",
 	},
 	"module": {
 		rules: [{
