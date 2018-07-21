@@ -1,0 +1,29 @@
+{
+  "name": "pandora-utils",
+  "version": "0.0.1",
+  "description": "短小而精悍的工具函数，来源于项目，方便日后复用;",
+  "main": "src/index.js",
+  "directories": {
+    "doc": "doc",
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andyxmq/pandora-utils.git"
+  },
+  "keywords": [
+    "工具函数、来源于项目"
+  ],
+  "author": "pandora utils",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andyxmq/pandora-utils/issues"
+  },
+  "homepage": "https://github.com/andyxmq/pandora-utils#readme",
+  "devDependencies": {
+    "eslint": "^5.1.0"
+  }
+}
