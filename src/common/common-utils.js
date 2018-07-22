@@ -14,3 +14,11 @@ export function inherit(p){
 	f.prototype = p;
 	return new f();
 } 
+
+/**
+ * 
+ * @param {*} x 表示两个值不存在
+ */
+export function existy(x){
+
+}
