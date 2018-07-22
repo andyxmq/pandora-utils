@@ -1,8 +1,11 @@
 var path = require("path");
+var htmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
-	"entry": "./src/index.js",
+	"entry": {
+		preload: "./src/example.js",
+	},
 	"output": {
-		path: path.resolve(__dirname, "release"),
+		path: path.resolve(__dirname, "example"),
 		filename: "[name].js",
 	},
 	"module": {
@@ -11,5 +14,11 @@ module.exports = {
 			exclude: /node_modules/,
 			loader: "babel-loader"
 		}]
-	}
+	},
+	plugins: [
+		new htmlWebpackPlugin({
+			template: 'index.html',
+			filename: 'preload.html'
+        })
+	]
 };
