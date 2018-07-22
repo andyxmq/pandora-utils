@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>继承函数 · GitBook</title>
+        <title>图片预加载函数 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="preload.html" />
+    <link rel="next" href="./" />
     
     
-    <link rel="prev" href="classOf.html" />
+    <link rel="prev" href="inherit.html" />
     
 
     </head>
@@ -129,7 +129,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="inherit.html">
+        <li class="chapter " data-level="1.2.2" data-path="inherit.html">
             
                 <a href="inherit.html">
             
@@ -142,7 +142,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="preload.html">
+        <li class="chapter active" data-level="1.2.3" data-path="preload.html">
             
                 <a href="preload.html">
             
@@ -235,7 +235,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >继承函数</a>
+        <a href="../.." >图片预加载函数</a>
     </h1>
 </div>
 
@@ -250,26 +250,68 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7EE7;&#x627F;&#x51FD;&#x6570;">&#x7EE7;&#x627F;&#x51FD;&#x6570;</h1>
+                                <h1 id="&#x56FE;&#x7247;&#x9884;&#x52A0;&#x8F7D;&#x51FD;&#x6570;">&#x56FE;&#x7247;&#x9884;&#x52A0;&#x8F7D;&#x51FD;&#x6570;</h1>
 <h2 id="&#x63CF;&#x8FF0;">&#x63CF;&#x8FF0;</h2>
-<pre><code>inherit&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x7EE7;&#x627F;&#x81EA;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#xFF1B;&#x9632;&#x6B62;&#x5E93;&#x51FD;&#x6570;&#x65E0;&#x610F;&#x95F4;&#x4FEE;&#x6539;&#x90A3;&#x4E9B;&#x4E0D;&#x53D7;&#x4F60;&#x63A7;&#x5236;&#x7684;&#x5BF9;&#x8C61;&#xFF1B;
+<pre><code>preload&#x9884;&#x52A0;&#x8F7D;&#x51FD;&#x6570;&#xFF0C;&#x63D0;&#x5347;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#xFF1B;
 </code></pre><h2 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h2>
 <blockquote>
-<p>inherit(obj) obj&#xFF1A;&#x5BF9;&#x8C61;</p>
-</blockquote>
-<pre><code class="lang-js">    <span class="hljs-keyword">import</span> { inherit } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;pandora-utils&apos;</span>;
-    <span class="hljs-keyword">var</span> parent = { x: <span class="hljs-number">1</span>, y: <span class="hljs-number">2</span> }
-    <span class="hljs-keyword">var</span> child = inherit(parent);
-</code></pre>
-<blockquote>
+<p>preload(imgs,options) </p>
 <p>&#x53C2;&#x6570;</p>
 </blockquote>
-<p>   &#x5BF9;&#x8C61;&#x3001;&#x51FD;&#x6570;</p>
+<p>   imgs: Array | String
+   options: {
+       order: &apos;unordered&apos;,//&#x9ED8;&#x8BA4;&#x65E0;&#x5E8F;
+       each: function(){}, //&#x6CA1;&#x6210;&#x529F;&#x52A0;&#x8F7D;&#x4E00;&#x5F20;&#x56FE;&#x6267;&#x884C;&#x56DE;&#x8C03;
+       all: function(){}//&#x5168;&#x90E8;&#x52A0;&#x8F7D;&#x5B8C;&#x6267;&#x884C;
+   }</p>
 <blockquote>
 <p>&#x8FD4;&#x56DE;&#x503C;</p>
 </blockquote>
-<pre><code>&#x65B0;&#x521B;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;
-</code></pre>
+<pre><code>&#x65E0;&#x8FD4;&#x56DE;&#x503C;
+</code></pre><blockquote>
+<p>&#x6817;&#x5B50;&#xFF1A;
+```js
+    //&#x65E0;&#x5E8F;
+    import { preload } from &apos;./common/preload&apos;;</p>
+</blockquote>
+<pre><code>var imgs = [
+    &apos;https://bbsfiles.vivo.com.cn/vivobbs/attachment/forum/201710/03/204231mfew33efpps7pu5i.jpg.thumb.jpg&apos;,
+    &apos;http://pic.58pic.com/58pic/13/74/51/99d58PIC6vm_1024.jpg&apos;,
+    &apos;http://img3.redocn.com/tupian/20160108/lvsehuahuizhizhangfanyexiaoguobeijingsucai_5728265.jpg&apos;,
+    &apos;http://img03.tooopen.com/uploadfile/downs/images/20110714/sy_20110714135215645030.jpg&apos;,
+    &apos;http://www.qqma.com/imgpic2/cpimagenew/2018/4/5/6e1de60ce43d4bf4b9671d7661024e7a.jpg&apos;,
+    &apos;https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1532282850458&amp;di=172e3dc8f0a2c9531a1ebf97d5bb8dd3&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.vsochina.com%2Fdata%2Fuploads%2Fresource%2Fbatch%2F193%2F23961517853a2c21f89ffa.jpg&apos;,
+    &apos;http://img3.redocn.com/tupian/20160108/lvsehuawentuankazhibeijingbiankuang_5728261.jpg&apos;,
+    &apos;http://img.zcool.cn/community/01cc0255411bca000001e71b3bca01.jpg@1280w_1l_2o_100sh.jpg&apos;,
+    &apos;http://pic.58pic.com/58pic/13/66/58/20258PICpDh_1024.png&apos;,
+    &apos;https://bbsfiles.vivo.com.cn/vivobbs/attachment/forum/201710/03/204241z8ta66qzq33z853d.jpg.thumb.jpg&apos;,
+    &apos;https://bbsfiles.vivo.com.cn/vivobbs/attachment/forum/201710/03/204249ocdqnxjxj1ncx1ij.jpg.thumb.jpg&apos;,
+];
+var len = imgs.length;
+var div = document.createElement(&quot;div&quot;);
+preload(imgs,{
+    each: function(count){
+        div.innerHTML = Math.round((count+1)/len*100)+&apos;%&apos;;
+        document.body.appendChild(div)
+    },
+    all: function(count){
+        document.title = &apos;1/&apos;+len;
+    },
+});
+
+//&#x6709;&#x5E8F;
+preload(imgs,{
+    order: &apos;ordered&apos;,
+    // each: function(count){
+    //     div.innerHTML = Math.round((count+1)/len*100)+&apos;%&apos;;
+    //     document.body.appendChild(div)
+    // },
+    // all: function(count){
+    //     document.title = &apos;1/&apos;+len;
+    // },
+});
+</code></pre><p>```</p>
+
                                 
                                 </section>
                             
@@ -296,12 +338,12 @@
 
             
                 
-                <a href="classOf.html" class="navigation navigation-prev " aria-label="Previous page: class类型">
+                <a href="inherit.html" class="navigation navigation-prev " aria-label="Previous page: 继承函数">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="preload.html" class="navigation navigation-next " aria-label="Next page: 图片预加载函数">
+                <a href="./" class="navigation navigation-next " aria-label="Next page: 算法函数">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -312,7 +354,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"继承函数","level":"1.2.2","depth":2,"next":{"title":"图片预加载函数","level":"1.2.3","depth":2,"path":"doc/dev/preload.md","ref":"doc/dev/preload.md","articles":[]},"previous":{"title":"class类型","level":"1.2.1","depth":2,"path":"doc/dev/classOf.md","ref":"doc/dev/classOf.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/dev/inherit.md","mtime":"2018-07-22T11:52:17.681Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-22T16:13:44.570Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"图片预加载函数","level":"1.2.3","depth":2,"next":{"title":"算法函数","level":"1.3","depth":1,"path":"doc/dev/README.md","ref":"doc/dev/README.md","articles":[{"title":"开发1","level":"1.3.1","depth":2,"path":"doc/dev/dev1.md","ref":"doc/dev/dev1.md","articles":[]},{"title":"开发2","level":"1.3.2","depth":2,"path":"doc/dev/dev2.md","ref":"doc/dev/dev2.md","articles":[]}]},"previous":{"title":"继承函数","level":"1.2.2","depth":2,"path":"doc/dev/inherit.md","ref":"doc/dev/inherit.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc/dev/preload.md","mtime":"2018-07-22T16:06:33.381Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-22T16:13:44.570Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
