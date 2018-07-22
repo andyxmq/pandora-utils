@@ -1,15 +1,14 @@
 var path = require("path");
-const excludeModules = /node_modules/;
 module.exports = {
 	"entry": "./src/index.js",
 	"output": {
 		path: path.resolve(__dirname, "release"),
-		filename: "[name].[hash].js",
+		filename: "[name].js",
 	},
 	"module": {
 		rules: [{
 			test: /\.js?$/,
-			exclude: excludeModules,
+			exclude: /node_modules/,
 			loader: "babel-loader"
 		}]
 	}

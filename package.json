@@ -1,14 +1,17 @@
 {
   "name": "pandora-utils",
-  "version": "0.0.2",
-  "description": "短小而精悍的工具函数，来源于项目，方便日后复用;",
+  "version": "0.0.3",
+  "description": "常用、精悍来源项目、算法的工具函数",
   "main": "src/index.js",
   "directories": {
     "doc": "doc",
     "example": "example"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.dev.js",
+    "release": "webpack --config webpack.prod.js",
+    "example": "http-server -p 8881"
   },
   "repository": {
     "type": "git",
@@ -24,14 +27,14 @@
   },
   "homepage": "https://github.com/andyxmq/pandora-utils#readme",
   "devDependencies": {
-    "eslint": "^5.1.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-latest": "^6.24.1"
+    "babel-preset-latest": "^6.24.1",
+    "eslint": "^5.1.0",
+    "webpack": "^3.10.0"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }

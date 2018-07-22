@@ -1,0 +1,16 @@
+export function classOf(o){
+	if(o===null) return "Null";
+	if(o===undefined) return "Undefined";
+	return Object.prototype.toString.call(o).slice(8,-1);
+}
+
+export function inherit(p){
+	if(p === null) throw TypeError();
+	if(Object.create)
+		return Object.create(p);
+	var t = typeof p;
+	if(t !== "object" && t !== "function") throw TypeError();
+	var f = function(){};
+	f.prototype = p;
+	return new f();
+} 
