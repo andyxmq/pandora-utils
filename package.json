@@ -1,6 +1,6 @@
 {
   "name": "pandora-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "常用、精悍来源项目、算法的工具函数",
   "main": "src/index.js",
   "directories": {
