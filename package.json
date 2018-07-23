@@ -1,6 +1,6 @@
 {
   "name": "pandora-utils",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "常用、精悍来源项目、算法的工具函数",
   "main": "src/index.js",
   "directories": {
@@ -18,7 +18,7 @@
     "url": "git+https://github.com/andyxmq/pandora-utils.git"
   },
   "keywords": [
-    "工具函数、来源于项目"
+    "工具函数、来源于项目、常用算法"
   ],
   "author": "https://github.com/andyxmq",
   "license": "MIT",

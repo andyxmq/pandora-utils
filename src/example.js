@@ -1,4 +1,4 @@
-import { preload } from './common/preload';
+import { preload } from './index';
 
 var imgs = [
     'https://bbsfiles.vivo.com.cn/vivobbs/attachment/forum/201710/03/204231mfew33efpps7pu5i.jpg.thumb.jpg',
@@ -17,24 +17,24 @@ var imgs = [
 var len = imgs.length;
 var div = document.createElement("div");
     //无序实现
-    // preload(imgs,{
-    //     each: function(count){
-    //         div.innerHTML = Math.round((count+1)/len*100)+'%';
-    //         document.body.appendChild(div)
-    //     },
-    //     all: function(count){
-    //         document.title = '1/'+len;
-    //     },
-    // });
+    preload(imgs,{
+        each: function(count){
+            div.innerHTML = Math.round((count+1)/len*100)+'%';
+            document.body.appendChild(div)
+        },
+        all: function(count){
+            document.title = '1/'+len;
+        },
+    });
 
     //有序加载
-    preload(imgs,{
-        order: 'ordered',
-        // each: function(count){
-        //     div.innerHTML = Math.round((count+1)/len*100)+'%';
-        //     document.body.appendChild(div)
-        // },
-        // all: function(count){
-        //     document.title = '1/'+len;
-        // },
-    });
+    // preload(imgs,{
+    //     order: 'ordered',
+    //     // each: function(count){
+    //     //     div.innerHTML = Math.round((count+1)/len*100)+'%';
+    //     //     document.body.appendChild(div)
+    //     // },
+    //     // all: function(count){
+    //     //     document.title = '1/'+len;
+    //     // },
+    // });

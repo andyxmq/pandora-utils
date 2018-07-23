@@ -8,7 +8,6 @@ function PreLoad(imgs,options){
     }else{
         this._unordered();
     }
-   
 }
 
 PreLoad.DEFAULTS = {

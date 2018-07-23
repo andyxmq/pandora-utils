@@ -1,2 +1,2 @@
-import * as  commonUtils from './common/common-utils';
-export default commonUtils;
+export {classOf,inherit,existy} from './common/common-utils';
+export {preload} from './common/preload';
