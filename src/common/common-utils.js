@@ -20,5 +20,5 @@ export function inherit(p){
  * @param {*} x 表示两个值不存在
  */
 export function existy(x){
-	return x != null;
+	return x !== null;
 }
