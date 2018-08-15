@@ -7,7 +7,7 @@
  * @example
  *
  */
-export function generateTargetUrl (url, params) {
+function generateTargetUrl (url, params) {
 	let pathParam = "";
 	for (var key in params) {
 		if (params[key]) {
@@ -17,3 +17,5 @@ export function generateTargetUrl (url, params) {
 	pathParam = pathParam.substring(0, pathParam.length - 1);
 	return `${url}?${pathParam}`;
 }
+
+module.exports = generateTargetUrl;

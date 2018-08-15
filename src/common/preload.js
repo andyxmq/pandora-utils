@@ -1,5 +1,6 @@
+"use strict";
 /**图片预加载*/
-import { classOf } from "./common-utils";
+const classOf = require("./classOf");
 function PreLoad(imgs,options){
 	this.imgs = (classOf(imgs) === "String") ? [imgs] : imgs;
 	this.opts = Object.assign({},PreLoad.DEFAULTS,options);

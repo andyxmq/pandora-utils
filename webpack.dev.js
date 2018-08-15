@@ -2,7 +2,7 @@ var path = require("path");
 var htmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
 	"entry": {
-		preload: "./src/example.js",
+		main: "./src/test.js",
 	},
 	"output": {
 		path: path.resolve(__dirname, "example"),
@@ -17,8 +17,7 @@ module.exports = {
 	},
 	plugins: [
 		new htmlWebpackPlugin({
-			template: 'index.html',
-			filename: 'preload.html'
-        })
+			template: "index.html"
+		})
 	]
 };

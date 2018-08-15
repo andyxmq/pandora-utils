@@ -8,7 +8,7 @@
     "example": "example"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node src/test.js",
     "dev": "webpack --config webpack.dev.js",
     "release": "webpack --config webpack.prod.js",
     "example": "http-server -p 8881"
