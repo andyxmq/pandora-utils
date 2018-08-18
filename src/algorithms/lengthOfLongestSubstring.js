@@ -17,10 +17,25 @@ function lengthOfLongestSubstring(s) {
 	let ans = 0;
 	for(let i = 0;i < len-1; ++i)
 		for(let j= i+1; j <= len; ++j)
-			if(allUnique(s,i,j)) ans = Math.max(ans,j-i)
+			if(allUnique(s,i,j)) ans = Math.max(ans,j-i);
 	return ans;
 }
 
-console.log(lengthOfLongestSubstring("asdfased"));
+function lengthOfLongestSubstring1(str){
+	let len = str.length;
+	let ans = 0, i = 0, j = 0;
+	let set = new Set();
+	while(i < len && j < len){
+		if(!set.has(str[j])){
+			set.add(str[j++]);
+			ans = Math.max(ans,j-i);
+		}else{
+			set.delete(str[i++]);
+		}
+	}
+	return ans;
+}
+
+console.log(lengthOfLongestSubstring1("abcabcdef"));
 module.exports = lengthOfLongestSubstring;
 
