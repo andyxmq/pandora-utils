@@ -1,10 +1,6 @@
 const existy = require("./existy");
 const classOf = require("./classOf");
-function formatNumber (n) {
-	const str = n.toString();
-	return str[1] ? str : `0${str}`;
-}
-
+const formatNumber = require("./formatNumber");
 function formatTime (date, divider) {
 	if (!existy(date)) return;
 	if (!divider) {
